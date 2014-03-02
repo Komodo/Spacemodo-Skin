@@ -1,0 +1,178 @@
+@import url("chrome://komodo/skin/plat/shared/_config/window.less");
+@import url("chrome://komodo/skin/plat/shared/icons_depend.less");
+@import url("chrome://spacemodo/skin/skins/default/_config/colors.less");
+
+@window-color:                          @color-text-stronger;
+@window-background:                     @color-strong;
+@window-appearance:                     none;
+@workspace-background:                  @color-weak;
+
+@sidebar-background:                    @color-strong;
+@sidebar-inactive-background:           @color-strong;
+
+@bottom-background:                     @color-strong;
+@bottom-inactive-background:            @color-strong;
+
+@main-border-color:                     transparent;
+@main-border-color-inactive:            transparent;
+@main-border:                           0;
+@main-border-inactive:                  0;
+
+@panel-border-color:                    transparent;
+@panel-border:                          0;
+
+@outset-border:                         @main-border;
+@inset-border:                          @main-border;
+
+@splitter-appearance:                   none;
+@splitter-background-color:             @color-strongest;
+@splitter-background-image:             ~"none !important";
+@splitter-border:                       0;
+@splitter-grippy-visibility:            collapse;
+
+/* separators */
+@separator-border-width:                1px 0;
+@separator-border-style:                solid;
+@separator-border-color:                fade(@color-strongest, 50%) #000 fade(@color-strongest, 80%);
+
+@button-appearance:                     none;
+@toolbarbutton-appearance:              none;
+@button-border-radius:                  4px;
+
+@button-background:                     @color-strongest;
+@button-color:                          @color-text-stronger;
+@button-border:                         0;
+@button-text-shadow:                    none;
+@button-color-disabled:                 fade(@button-color, 60%);
+@button-internal-border:                none;
+
+@button-background-hover:               @color-weak;
+@button-color-hover:                    @button-color;
+@button-border-hover:                   @button-border;
+@button-text-shadow-hover:              none;
+@button-internal-border-hover:          none;
+
+@button-background-active:              @color-strongest;
+@button-color-active:                   @button-color-hover;
+@button-border-active:                  @button-border-hover;
+@button-text-shadow-active:             none;
+
+@button-embedded-background:            transparent;
+@button-embedded-color:                 @window-color;
+@button-embedded-border:                none;
+@button-embedded-text-shadow:           none;
+@button-embedded-color-disabled:        fade(@button-embedded-color, 60%);
+
+@textbox-appearance:                    none !important;
+@menulist-appearance:                   none !important;
+@menulist-editable-box-appearance:      none !important;
+@menulist-dropmarker-appearance:        none;
+@menulist-dropmarker-background:        transparent;
+@menulist-dropmarker-border:            none;
+@menulist-dropmarker-display:           -moz-box;
+@textbox-background:                    @color-weakest;
+@textbox-color:                         @color-text-stronger;
+@textbox-box-shadow:                    none;
+@textbox-border:                        0;
+@textbox-border-radius:                 4px;
+
+@textbox-background-disabled:           fade(@color-weak, 80%);
+@textbox-color-disabled:                fade(@color-text-stronger, 50%);
+@textbox-border-disabled:               0;
+
+@checkbox-appearance:                   none;
+@checkbox-color:                        @color-text-stronger;
+@checkbox-background-hover:             @color-weak;
+@checkbox-label-box-appearance:         none;
+@checkbox-check-spacer-appearance:      none;
+@checkbox-check-spacer-border:          0;
+@checkbox-check-spacer-background:      transparent;
+@checkbox-check-border:                 0;
+@checkbox-check-background:             @icon-checkbox;
+@checkbox-check-background-checked:     @icon-checkbox-checked;
+@checkbox-disabled-opacity:             0.6;
+
+@radio-appearance:                      none;
+@radio-color:                           @color-text-stronger;
+@radio-background-hover:                @color-weak;
+@radio-label-box-appearance:            none;
+@radio-check-appearance:                none;
+@radio-check-border:                    0;
+@radio-check-background:                @icon-radio;
+@radio-check-background-selected:       @icon-radio-selected;
+@radio-check-image-visibility:          collapse;
+@radio-disabled-opacity:                0.6;
+
+@statusbar-appearance:                  none;
+@statusbarpanel-appearance:             none;
+@statusbar-background:                  @color-strongest;
+@statusbar-text-color:                  @color-text-strong;
+@statusbar-font:                        inherit;
+@statusbar-font-size:                   inherit;
+@statusbar-border-width:                1px 0 0 0;
+@statusbar-border-style:                solid;
+@statusbar-border-color:                @color-strong;
+@statusbar-panel-border-image:          none;
+@statusbar-button-border:               0;
+
+@list-tree-appearance:                  none;
+@list-tree-background:                  @color-weak;
+@list-tree-border:                      0;
+@list-tree-header-appearance:           none;
+@list-tree-header-background:           @color-strong;
+@list-tree-header-border-width:         0;
+@list-tree-header-border-style:         solid;
+@list-tree-header-border-color:         transparent;
+@list-tree-header-color:                @color-text-strong;
+@list-tree-item-color:                  @color-text-weak;
+@list-tree-item-color-selected:         @color-text-strongest;
+@list-tree-item-color-focus:            @color-text-strongest;
+@list-tree-row-background:              transparent;
+@list-tree-row-background-odd:          rgba(0, 0, 0, 0.1);
+@list-tree-row-background-selected:     @color-weakest;
+@list-tree-row-background-focus:        @color-weakest;
+
+@list-listbox-appearance:               @list-tree-appearance;
+@list-listbox-background:               @list-tree-background;
+@list-listbox-border:                   @list-tree-border;
+@list-listbox-header-appearance:        @list-tree-header-appearance;
+@list-listbox-header-background:        @list-tree-header-background;
+@list-listbox-header-border-width:      @list-tree-header-border-width;
+@list-listbox-header-border-style:      @list-tree-header-border-style;
+@list-listbox-header-border-color:      @list-tree-header-border-color;
+@list-listbox-header-color:             @list-tree-header-color;
+@list-listbox-item-color:               @list-tree-item-color;
+@list-listbox-item-color-selected:      @list-tree-item-color-selected;
+@list-listbox-item-color-focus:         @list-tree-item-color-focus;
+@list-listbox-row-background:           @list-tree-row-background;
+@list-listbox-row-background-odd:       @list-tree-row-background-odd;
+@list-listbox-row-background-selected:  @list-tree-row-background-selected;
+@list-listbox-row-background-focus:     @list-tree-row-background-focus;
+
+/* Groupboxes */
+@groupbox-appearance:                   none;
+@groupbox-border:                       0;
+
+@caption-font-weight:                   bold;
+@caption-background:                    transparent;
+
+/* Tooltips */
+@tooltip-appearance:                    none;
+@tooltip-background:                    @color-strong;
+@tooltip-border:                        0;
+@tooltip-color:                         @color-text-stronger;
+
+/* Wizards */
+@wizard-header-appearance:              none;
+@wizard-header-border:                  2px solid @color-strong;
+@wizard-buttons-border:                 none;
+@wizard-buttons-appearance:             none;
+
+/* Alerts */
+@alertbox-background:                   -moz-linear-gradient(top, rgba(80, 157, 212, 0.05) 15%, rgba(80, 157, 212, 0.1) 100%);
+@alertbox-border:                       @main-border;
+
+@alertbox-image-background:             rgba(0,0,0,0.2);
+@alertbox-image-border:                 none;
+
+@alertbox-text-background:              transparent;

@@ -1,0 +1,11 @@
+override chrome://komodo/skin/iconset/config.less chrome://spacemodo/skin/iconsets/default/config.less
+override chrome://komodo/skin/iconset/rules.less chrome://spacemodo/skin/iconsets/default/rules.less
+
+skin icomoon spacemodo jar:icons.jar!/skin/
+skin icomoon-hidpi spacemodo jar:icons-hidpi.jar!/skin/
+
+# Override images that are hard coded in the source and therefore can't be overriden with css
+override chrome://komodo/skin/images/folder-closed.png  chrome://icomoon/skin/icons/folder4.png
+override moz-icon://stock/gtk-directory?size=16         chrome://icomoon/skin/icons/folder4.png
+override chrome://komodo/skin/images/project_icon.png   chrome://icomoon/skin/icons/folder4.png
+override moz-icon://stock/gtk-home?size=16              chrome://icomoon/skin/icons/folder4.png

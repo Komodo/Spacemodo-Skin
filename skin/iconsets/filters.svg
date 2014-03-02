@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+
+        <filter id="greyscale" filterUnits="objectBoundingBox" x="0" y="0" width="1" height="1">
+            <feColorMatrix in="SourceGraphic" type="saturate" values="0" />
+        </filter>
+
+        <!-- ========== Fill Darker Gray ========== -->
+        <filter id="fill-darkergray">
+            <feFlood
+               flood-color="rgb(80,80,80)"
+               in="SourceAlpha"
+               result="result1" />
+            <feComposite
+               in2="SourceGraphic"
+               in="result1"
+               operator="in"
+               result="result2" />
+        </filter>
+
+        <!-- ========== Fill Light Gray ========== -->
+        <filter id="fill-lightgray">
+            <feFlood
+               flood-color="rgb(180,180,180)"
+               in="SourceAlpha"
+               result="result1" />
+            <feComposite
+               in2="SourceGraphic"
+               in="result1"
+               operator="in"
+               result="result2" />
+        </filter>
+
+        <!-- ========== Fill White ========== -->
+        <filter id="fill-white">
+            <feFlood
+               flood-color="rgb(255,255,255)"
+               in="SourceAlpha"
+               result="result1" />
+            <feComposite
+               in2="SourceGraphic"
+               in="result1"
+               operator="in"
+               result="result2" />
+        </filter>
+    </defs>
+</svg>

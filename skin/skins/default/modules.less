@@ -1,0 +1,55 @@
+@import url("chrome://komodo/skin/plat/shared/modules.less");
+
+/* Open Files Widget */
+
+#openfilesWrapper
+{
+    [class$='-icon'], [class$='-icon'],
+    [class$='_icon'], [class$='_icon']
+    {
+        visibility: collapse;
+    }
+
+    richlistitem
+    {
+        padding: 5px 0 2px 10px;
+
+        label
+        {
+            color: @color-text-weak;
+        }
+
+        &[selected] label
+        {
+            color: @color-text-strongest;
+        }
+    }
+}
+
+/* Pref Pane */
+
+#pref-filter-textbox
+{
+    margin: 0 0 1px 0;
+    border-radius: 0;
+}
+
+#pref-deck
+{
+    tree
+    {
+        margin: 0;
+
+        & > treecols:first-child
+        {
+            visibility: hidden;
+            overflow: hidden;
+            height: 0;
+        }
+
+        :-moz-tree-row
+        {
+            margin-right: 6px;
+        }
+    }
+}

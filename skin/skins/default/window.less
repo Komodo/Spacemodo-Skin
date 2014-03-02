@@ -1,0 +1,166 @@
+@import url("chrome://komodo/skin/plat/shared/window.less");
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,400italic,300italic,700,700italic);
+
+:root
+{
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 300;
+    font-size: 9pt;
+
+    *
+    {
+        font-size: 1rem;
+    }
+}
+
+#places-files-tree.hideIcons
+{
+    treechildren#places-files-tree-body::-moz-tree-cell-text(places_folder_open),
+    treechildren#places-files-tree-body::-moz-tree-cell-text(places_folder_closed)
+    {
+        font-weight: 400 !important;
+    }
+}
+
+splitter.multiview_splitter
+{
+    min-width: 3px !important;
+    min-height: 3px;
+}
+
+#topview tabpanel view:not([type="startpage"])
+{
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+statusbar
+{
+    .statusbar-resizerpanel
+    {
+        -moz-appearance: none;
+    }
+
+    label
+    {
+        text-shadow: none;
+        color: @statusbar-text-color;
+    }
+
+    statusbarpanel > toolbarbutton > image,
+    image[anonid="section-image"]
+    {
+        visibility: collapse;
+    }
+
+}
+
+button
+{
+    min-height: 23px;
+}
+
+minimap
+{
+    background-color: @color-weak;
+}
+
+page :not(toolbarbutton):not(toolbaritem),
+window#komodo_main :not(toolbarbutton):not(toolbaritem)
+{
+    & > :-moz-any(button,toolbarbutton):not(.tab-close-button):not(.tabs-closebutton)
+    {
+        padding: 2px;
+        margin: 2px;
+
+        transition: all 0.2s ease;
+
+        & > :-moz-any(button, toolbarbutton)
+        {
+            margin: 0;
+            -moz-appearance: none;
+        }
+    }
+}
+
+#prefWindow
+{
+    padding: 0;
+
+    #pref-deck-vbox + splitter + vbox
+    {
+        padding: 6px;
+    }
+}
+
+/* Misc */
+
+#placesSubpanelSplitterHbox
+{
+    border-top: 0 !important;
+}
+
+/* Trees */
+
+treechildren::-moz-tree-row
+{
+    height: 22px;
+}
+
+
+/* Text Selection */
+
+::-moz-selection { color: @color-text-strongest; background: @color-strongest;  }
+
+/* Groupbox */
+
+groupbox .groupbox-body
+{
+    -moz-appearance: none;
+    border: 0;
+    background: none;
+    margin-top: 5px;
+}
+
+/* Form Elements */
+
+:-moz-any(textbox, menulist, button[type="menu"]):not(.plain)
+{
+    padding: 4px;
+}
+
+/* Menu's */
+
+menupopup:not(#statusbar-filetype-menu)
+{
+    label.menu-iconic-text,
+    label.menu-text
+    {
+        font-size: 10pt !important;
+        padding: 4px 0;
+    }
+
+    .menu-iconic-icon
+    {
+        visibility: collapse;
+    }
+}
+
+menuseparator
+{
+    border: 0;
+    height: 2px;
+}
+
+/* Buttons */
+
+button:-moz-any(.button-toolbar-a, .button-toolbar-b, .button-toolbar-c, .button-toolbar-d, .button-plain):not([disabled="true"]):not(.button-link):not([type="menu"]),
+:not(toolbarbutton):not(toolbaritem) > toolbarbutton:not([disabled="true"])
+{
+    &:hover
+    {
+        background-color: transparent !important;
+    }
+}

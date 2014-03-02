@@ -1,0 +1,107 @@
+@media (min-resolution: 144dpi)
+{
+    @import url("chrome://spacemodo/skin/iconsets/default/config-hidpi.less");
+
+    /* Force import by appending some bogus info, as less forces the import-once behavior */
+    @import url("chrome://komodo/skin/plat/shared/icons_rules.less?hidpi");
+}
+
+button, toolbarbutton, menuitem
+{
+    &[class*='-icon'], [class*='-icon'],
+    &[class*='_icon'], [class*='_icon']
+    {
+        & > image,
+        &:-moz-any(image)
+        {
+            max-width: 16px;
+            opacity: 0.7
+        }
+
+        &[disabled="true"] > image,
+        &:-moz-any(image)[disabled="true"]
+        {
+            opacity: 0.2;
+        }
+    }
+}
+
+.toolbarbutton-icon,
+.button-icon,
+.menu-iconic-icon,
+treechildren::-moz-tree-image,
+.textbox-search-icon,
+.native_file_image,
+dropmarker > image
+{
+    max-width: 16px;
+}
+
+#main-toolboxrow toolbarbutton > image,
+#main-toolboxrow toolbarbutton .toolbarbutton-icon
+{
+    width: 16px;
+    max-width: none;
+}
+
+#placesViewbox_placesWrapper
+#findresults_tabpanel-toolbarbox,
+.panel-toolbar-buttons
+{
+    toolbarbutton image &.toolbarbutton-icon,
+    button image &.toolbarbutton-icon
+    {
+        max-width: 14px;
+    }
+}
+
+.scrollbutton-down > image,
+.scrollbutton-up > image,
+button > hbox.button-box > image.button-icon
+{
+    max-width: none;
+}
+
+/* Explicitely override statusbar message close icon max-width, we need
+   to fix this properly for a larger release, ie. fix the max-width none rule above */
+#statusbar-message-clear .button-icon
+{
+    max-width: 16px;
+}
+
+/* Custom Rules */
+
+.tabs-closebutton,
+.tab-close-button
+{
+    list-style-image: @icon-close !important;
+    background-position: 0 !important;
+    -moz-image-region: inherit !important;
+    opacity: 0.2 !important;
+
+    &:hover
+    {
+        opacity: 0.7 !important;
+    }
+}
+
+treechildren::-moz-tree-twisty
+{
+    -moz-appearance: none;
+    list-style-image: url("chrome://icomoon/skin/icons/arrow-right3.png");
+    width: 16px;
+    padding-right: 6px;
+
+    /* Todo: sort our linux alignment issue */
+}
+
+treechildren::-moz-tree-twisty(open)
+{
+    list-style-image: url("chrome://icomoon/skin/icons/arrow-down2.png");
+}
+
+treechildren::-moz-tree-cell-text(places_folder_open),
+treechildren::-moz-tree-cell-text(places_folder_closed)
+{
+    list-style-image: none !important;
+}
