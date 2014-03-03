@@ -1,5 +1,5 @@
 var schemeService = Cc['@activestate.com/koScintillaSchemeService;1'].getService();
-var schemeName = "Spacemodo";
+var schemeName = "Spacemodo - Grayscale";
 
 if (schemeService.getScheme(schemeName) != schemeName)
 {

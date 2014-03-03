@@ -18,6 +18,12 @@
             iconset="spacemodo"
             insertafter="pref_appearance_skin_default"
             />
+        <menuitem id="pref_appearance_skin_spacemodo_grayscale"
+            label="&skinSpacemodoGrayscale.label;"
+            value="chrome://spacemodo/content/skins/grayscale/chrome.manifest"
+            iconset="spacemodo"
+            insertafter="pref_appearance_skin_spacemodo"
+            />
     </menupopup>
 
     <menupopup id="koSkin_custom_icons_menupopup">
