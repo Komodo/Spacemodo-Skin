@@ -12,4 +12,4 @@ override chrome://komodo/skin/toolbars.less chrome://spacemodo/skin/skins/defaul
 override chrome://komodo/skin/modules.less  chrome://spacemodo/skin/skins/default/modules.less
 override chrome://komodo/skin/window.less   chrome://spacemodo/skin/skins/default/window.less
 
-override chrome://komodo/skin/platform.less          chrome://spacemodo/skin/skins/default/platform.less
+override chrome://komodo/skin/platform.less          chrome://spacemodo-platform/content/platform.less
