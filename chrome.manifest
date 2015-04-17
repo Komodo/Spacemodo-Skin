@@ -1,4 +1,5 @@
 content spacemodo content/
+content spacemodo-platform chrome://spacemodo/skin/skins/platform/ platform
 skin spacemodo classic/1.0 skin/
 locale spacemodo en-US locale/en-US/
 overlay chrome://komodo/content/pref/pref-ui.xul chrome://spacemodo/content/overlay_pref-ui.xul

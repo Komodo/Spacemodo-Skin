@@ -1,16 +1,17 @@
 @import url("chrome://komodo/skin/plat/shared/tabs.less");
 @import url("chrome://spacemodo/skin/skins/default/_config/colors.less");
 
-#editorviewbox tabs
-{
-    tab
-    {
+#editorviewbox tabs {
+    tab {
         padding: 8px;
-
         .tab-icon
         {
             visibility: collapse;
         }
+        .tab-text {
+            font-weight: 400 !important;
+        }
+
     }
 }
 
@@ -52,11 +53,32 @@ tabs tab:first-child
 
 ko-pane[type="icons"] tab
 {
-  margin: 4px 4px 4px 0;
-  padding-top: 2px;
-  padding-bottom: 2px;
+    margin: 4px 4px 4px 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
 
-  &:last-child {
-    margin-right: 0;
-  }
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+tabbox:not(.tabs-bottom) tabpanels {
+    -moz-appearance: none;
+    border: none !important;
+    padding: 0px !important;
+    tabpanel {
+        background: @color-strong;
+        menulist {
+            min-width: 42px !important;
+        }
+    }
+}
+
+
+textbox#fontLineSpacing > hbox {
+    -moz-appearance: none; //do not use native mozilla textboxes
+    border: none !important;
+    input.numberbox-input {
+        padding: 2px !important
+    }
 }

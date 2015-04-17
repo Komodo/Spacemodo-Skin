@@ -1,0 +1,14 @@
+@import url("chrome://spacemodo/skin/skins/default/platform.less");
+:root
+{
+    font-weight: 400;
+}
+
+#places-files-tree.hideIcons
+{
+    treechildren#places-files-tree-body::-moz-tree-cell-text(places_folder_open),
+    treechildren#places-files-tree-body::-moz-tree-cell-text(places_folder_closed)
+    {
+        font-weight: 700 !important;
+    }
+}
